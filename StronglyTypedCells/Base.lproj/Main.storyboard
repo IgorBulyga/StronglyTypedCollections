@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SWX-ei-ShB">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--UICollectionView-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CollectionViewController" customModule="StronglyTypedCells" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1ua-5J-4DR">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kvW-Nb-a0W">
+                                    <size key="itemSize" width="100" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1ua-5J-4DR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="7YI-5L-vl1"/>
+                            <constraint firstAttribute="bottom" secondItem="1ua-5J-4DR" secondAttribute="bottom" id="h1t-sB-JVY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1ua-5J-4DR" secondAttribute="trailing" id="yqD-JS-Zw6"/>
+                            <constraint firstItem="1ua-5J-4DR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ysP-5v-m3I"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="UICollectionView" image="collections" id="Fo2-fB-H0u"/>
+                    <connections>
+                        <outlet property="collectionView" destination="1ua-5J-4DR" id="VOB-fb-NQc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="724" y="-146.17691154422789"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="j7t-rH-MoS">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="SWX-ei-ShB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5de-E9-k5h">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="aa1-Z7-eat"/>
+                        <segue destination="6q9-41-m9X" kind="relationship" relationship="viewControllers" id="8C1-Di-myN"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jq0-yb-0nl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-163.19999999999999" y="132.23388305847078"/>
+        </scene>
+        <!--UITableView-->
+        <scene sceneID="Xwm-My-tdm">
+            <objects>
+                <viewController id="6q9-41-m9X" customClass="TableViewController" customModule="StronglyTypedCells" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oJF-RS-v1f">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="g3Y-GO-6U2">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QPl-fU-nij" firstAttribute="trailing" secondItem="g3Y-GO-6U2" secondAttribute="trailing" id="2vM-oH-p16"/>
+                            <constraint firstItem="g3Y-GO-6U2" firstAttribute="leading" secondItem="QPl-fU-nij" secondAttribute="leading" id="YfM-Ae-7xo"/>
+                            <constraint firstItem="g3Y-GO-6U2" firstAttribute="top" secondItem="QPl-fU-nij" secondAttribute="top" id="mjL-bY-R0n"/>
+                            <constraint firstAttribute="bottom" secondItem="g3Y-GO-6U2" secondAttribute="bottom" id="yl2-Mv-EUA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QPl-fU-nij"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="UITableView" image="table" id="tzD-o5-iP8"/>
+                    <connections>
+                        <outlet property="tableView" destination="g3Y-GO-6U2" id="1fY-6X-Dmb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4r3-b5-RYz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="709.60000000000002" y="561.76911544227892"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="collections" width="21" height="21"/>
+        <image name="table" width="21" height="21"/>
+    </resources>
+</document>
